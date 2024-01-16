@@ -3,12 +3,13 @@ import { database } from './database.js';
 import cors from "cors";
 
 const app = express();
-const port = 5000;
+const port = 4000;
 app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  // res.download('database.js');
+  res.send('wassup, World!');
 });
 
 app.get('/api/bog/users', (req, res) => {

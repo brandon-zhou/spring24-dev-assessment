@@ -1,3 +1,22 @@
 .App {
   text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+table {
+  border: 2px solid black;
+  width: 80%;
+  table-layout: fixed;
+  height: 200px;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: center;
 }
