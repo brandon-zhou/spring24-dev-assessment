@@ -1,7 +1,12 @@
 {
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "axios": "^1.6.5",
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "framer-motion": "^10.18.0",
+    "react-router-dom": "^6.21.2"
   },
   "scripts": {
     "postinstall": "concurrently yarn:postinstall:*",
