@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -23,6 +23,15 @@ import {
     const [rating, setRating] = useState(user?.rating || false);
     const [status, setStatus] = useState(user?.status || "");
     const [project, setProject] = useState(user?.hero_project || "");
+    useEffect(() => {
+      setName(user?.name || "");
+      setAvatar(user?.avatar || "");
+      setPhone(user?.phone || "");
+      setEmail(user?.email || "");
+      setRating(user?.rating || false);
+      setStatus(user?.status || "");
+      setProject(user?.hero_project || "");
+    }, [user]);
     const handleSubmit = () => {
       if (userkey === null) {
         let temp = {
@@ -52,10 +61,10 @@ import {
 
     return (
       <>
-        <Button onClick={onOpen}>{update ? "Update User" : "New User"}</Button>
+        <Button onClick={onOpen} marginBottom={5}>{update ? "Update User" : "New User"}</Button>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay/>
-          <ModalContent width="500px" boxShadow={"0px 4px 30px 0px #00000040"}>
+          <ModalContent>
             <ModalHeader>Account details</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>

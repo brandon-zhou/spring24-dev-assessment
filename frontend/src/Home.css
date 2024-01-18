@@ -1,8 +1,9 @@
 table {
   border: 2px solid black;
-  width: 80%;
+  width: 1200px;
   table-layout: fixed;
   height: 200px;
+  overflow: scroll;
 }
 
 th {
@@ -11,4 +12,5 @@ th {
 
 td {
   text-align: center;
+  width: 100%
 }
